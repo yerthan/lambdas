@@ -43,8 +43,6 @@ public class Ejercicio1 {
         treeSetNumbers.addAll(listNumbers);
         System.out.println("This is the treeSet sorted " + treeSetNumbers);
 
-
-
     }
 
 }
