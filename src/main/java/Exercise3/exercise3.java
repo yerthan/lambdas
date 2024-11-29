@@ -16,7 +16,7 @@ public class exercise3 {
         //variables
 
         Scanner sc = new Scanner(System.in);
-        List<Integer> list = new ArrayList<Integer>();
+
         Set<List<Integer>> hashSet = new HashSet<>();
 
 
@@ -27,16 +27,24 @@ public class exercise3 {
             if (word.isEmpty()) {
                 break;
             }
+
+            //Converts the words on Integers
+            String[] numbers = word.split(" ");
+            List<Integer> list = new ArrayList<Integer>();
+            for (String number : numbers) {
+                list.add(Integer.parseInt(number));
+            }
+
+            hashSet.add(list);
         }
+        System.out.println("HashSet: ");
+        hashSet.forEach(list -> {
+            list.forEach(number -> System.out.print(number + " "));
 
+        });
 
-        //Convert the words on Integers
-        String[] numbers = word.split(" ");
-        for (String number : numbers) {
-            list.add(Integer.parseInt(number));
-        }
-
-        hashSet.add(list);
-
+        sc.close();
     }
+
+
 }
