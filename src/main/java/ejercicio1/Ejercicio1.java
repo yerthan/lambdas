@@ -43,6 +43,10 @@ public class Ejercicio1 {
         treeSetNumbers.addAll(listNumbers);
         System.out.println("This is the treeSet sorted " + treeSetNumbers);
 
+        //This is a stream to sort and print
+        System.out.println("Sorted Stream");
+        listNumbers.stream().sorted(comparator).forEach(System.out::println);
+
     }
 
 }
